@@ -6,7 +6,7 @@ const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const fetchUser = require('../Middleware/fetchUser.js');
-const {jwtSecret} = require('../Config/Keys')
+const jwtSecret="kslafdjalskf"
 const Recipe = require("../Modals/Recipe.js");
 
 //crate user no login required

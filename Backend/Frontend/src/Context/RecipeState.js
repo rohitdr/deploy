@@ -33,7 +33,7 @@ export default function RecipeState(props) {
     try {
       setProgress(30);
       const response = await fetch(
-        `http://localhost:5000/api/recipe/allRecipeswithdietLabels/${type}`,
+        `https://deploy-tau-two.vercel.app/api/recipe/allRecipeswithdietLabels/${type}`,
         {
           method: "GET",
           mode: "cors",
@@ -65,7 +65,7 @@ export default function RecipeState(props) {
     try {
       setProgress(30);
       const response = await fetch(
-        `http://localhost:5000/api/recipe/allRecipeswithdishtype/${type}`,
+        `https://deploy-tau-two.vercel.app/api/recipe/allRecipeswithdishtype/${type}`,
         {
           method: "GET",
           mode: "cors",
@@ -93,8 +93,8 @@ export default function RecipeState(props) {
       const response = await fetch(
         `${
           type == "lunch/dinner"
-            ? "http://localhost:5000/api/recipe/allRecipeswithmealtypelunchdinner"
-            : `http://localhost:5000/api/recipe/allRecipeswithmealtype/${type}`
+            ? "https://deploy-tau-two.vercel.app/api/recipe/allRecipeswithmealtypelunchdinner"
+            : `https://deploy-tau-two.vercel.app/api/recipe/allRecipeswithmealtype/${type}`
         }`,
         {
           method: "GET",
@@ -122,7 +122,7 @@ export default function RecipeState(props) {
       sethealthloading(true);
       setProgress(30);
       const response = await fetch(
-        `http://localhost:5000/api/recipe/allRecipeswithhealthlabels/${type}`,
+        `https://deploy-tau-two.vercel.app/api/recipe/allRecipeswithhealthlabels/${type}`,
         {
           method: "GET",
           mode: "cors",
@@ -149,7 +149,7 @@ export default function RecipeState(props) {
     try {
       setProgress(30);
       const response = await fetch(
-        `http://localhost:5000/api/recipe/allRecipeswithcuisinetype/${type}`,
+        `https://deploy-tau-two.vercel.app/api/recipe/allRecipeswithcuisinetype/${type}`,
         {
           method: "GET",
           mode: "cors",
@@ -180,7 +180,7 @@ export default function RecipeState(props) {
     try {
       setLoading(true);
       const response = await fetch(
-        "http://localhost:5000/api/auth/getUserbyid",
+        "https://deploy-tau-two.vercel.app/api/auth/getUserbyid",
         {
           method: "POST",
           mode: "cors",
@@ -210,7 +210,7 @@ export default function RecipeState(props) {
       setLoading(true);
       setProgress(30);
       const response = await fetch(
-        `http://localhost:5000/api/recipe/recipebyid/${id}`,
+        `https://deploy-tau-two.vercel.app/api/recipe/recipebyid/${id}`,
         {
           method: "GET",
           mode: "cors",
@@ -238,7 +238,7 @@ export default function RecipeState(props) {
     try {
       setProgress(30);
       const response = await fetch(
-        "http://localhost:5000/api/recipe/allLikedRecipe",
+        "https://deploy-tau-two.vercel.app/api/recipe/allLikedRecipe",
         {
           method: "GET",
           mode: "cors",
@@ -277,7 +277,7 @@ export default function RecipeState(props) {
         sessionStorage.getItem("auth-token") ||
         localStorage.getItem("auth-token")
       ) {
-        const response = await fetch("http://localhost:5000/api/auth/getUser", {
+        const response = await fetch("https://deploy-tau-two.vercel.app/api/auth/getUser", {
           method: "POST",
           mode: "cors",
           headers: {
@@ -305,7 +305,7 @@ export default function RecipeState(props) {
   const UnLikeRecipe = async (recipeid) => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/api/recipe/unlike", {
+      const response = await fetch("https://deploy-tau-two.vercel.app/api/recipe/unlike", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -332,7 +332,7 @@ export default function RecipeState(props) {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/recipe/like", {
+      const response = await fetch("https://deploy-tau-two.vercel.app/api/recipe/like", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -372,7 +372,7 @@ export default function RecipeState(props) {
       setnamereicpeloading(true);
 
       const response = await fetch(
-        `http://localhost:5000/api/recipe/allRecipeswith${recipename}`,
+        `https://deploy-tau-two.vercel.app/api/recipe/allRecipeswith${recipename}`,
         {
           method: "GET",
           mode: "cors",
@@ -407,7 +407,7 @@ export default function RecipeState(props) {
     try {
       setLoading(true);
       const response = await fetch(
-        "http://localhost:5000/api/recipe/LatestRecipes",
+        "https://deploy-tau-two.vercel.app/api/recipe/LatestRecipes",
         {
           method: "GET",
           mode: "cors",
@@ -434,7 +434,7 @@ export default function RecipeState(props) {
     try {
       setProgress(30);
       const response = await fetch(
-        "http://localhost:5000/api/recipe/LatestRecipesbyid",
+        "https://deploy-tau-two.vercel.app/api/recipe/LatestRecipesbyid",
         {
           method: "GET",
           mode: "cors",
@@ -473,7 +473,7 @@ export default function RecipeState(props) {
     try {
       setProgress(30);
       const response = await fetch(
-        "http://localhost:5000/api/recipe/allRecipes",
+        "https://deploy-tau-two.vercel.app/api/recipe/allRecipes",
         {
           method: "GET",
           mode: "cors",
@@ -517,7 +517,7 @@ export default function RecipeState(props) {
       setLoading(true);
 
       const response = await fetch(
-        `http://localhost:5000/api/recipe/deleteRecipe/${id}`,
+        `https://deploy-tau-two.vercel.app/api/recipe/deleteRecipe/${id}`,
         {
           method: "DELETE",
           mode: "cors",
